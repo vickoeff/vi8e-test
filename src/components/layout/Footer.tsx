@@ -6,11 +6,13 @@ import { FOOTER_MENU } from "@/constants/footer";
 export const Footer = () => {
   return (
     <footer>
-      <div className="flex flex-row flex-wrap justify-center items-center py-9 container bg-brown-400  text-white gap-4 md:gap-10">
-        <h2 className="text-xl md:text-2xl font-bold">FREE DELIVERY</h2>
-        <div className="border-r-[1px] border-white w-[1px] h-[40px]"></div>
-        <p className="text-sm">For orders over $199</p>
-        <Button variant="secondary">SHOP COLLECTIONS</Button>
+      <div className="py-7 md:py-9  bg-brown-400  text-white">
+        <div className="container flex flex-row flex-wrap justify-center items-center gap-4 md:gap-10">
+          <h2 className="text-xl md:text-2xl font-bold">FREE DELIVERY</h2>
+          <div className="border-r-[1px] border-white w-[1px] h-[40px]"></div>
+          <p className="text-sm">For orders over $199</p>
+          <Button variant="secondary">SHOP COLLECTIONS</Button>
+        </div>
       </div>
       <div className="bg-gray-1000 pt-14 pb-9 md:pb-20 text-white">
         <div className="container">
