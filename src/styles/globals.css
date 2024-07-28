@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "./button.css";
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+  --color-white: #fff;
+  --color-brown: #9B622F;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+/*
+* FONT FAMILY
+*/
+@layer base {
+  @font-face {
+    font-family: 'Bodoni';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(../../public/fonts/Bodoni.ttf);
+  }
+  @font-face {
+    font-family: 'Cabin';
+    font-style: normal;
+    font-weight: 200;
+    font-display: swap;
+    src: url(../../public/fonts/Cabin.ttf);
+  }
+  @font-face {
+    font-family: 'PlayFair';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(../../public/fonts/PlayfairDisplay.ttf);
+  }
+}
+
+* {
+  font-family: "Cabin", "Arial";
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+}
+
+@layer components {
+  .text-subtitle {
+    @apply text-3xl font-semibold;
+    font-family: PlayFair, "sans-serif";
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .center-line {
+    display: block;
+    height: 1px;
+    border-width: 1px;
+    border-style: solid;
+    margin-right: 9.22px;
+  }
+}
