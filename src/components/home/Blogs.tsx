@@ -70,13 +70,13 @@ const BlogItem = ({ title, desc, image, date, author, className, category }: IBl
 
 export const Blogs = () => {
   return (
-    <section id="blogs" className="py-14 bg-gray-400">
+    <section id="blogs" className="py-14 bg-gray-400 overflow-hidden">
       <div className="container">
         <h2 className="text-subtitle text-center mb-9">Recent Blogs</h2>
-        <div className="flex flex-row gap-2">
+        <div className="flex flex-row gap-2 overflow-auto">
           {
             MOCK_DATA.map(({ title, desc, image, date, author, category }) =>
-              <BlogItem key={title} title={title} desc={desc} image={image} date={date} author={author} category={category} className="w-1/4" />
+              <BlogItem key={title} title={title} desc={desc} image={image} date={date} author={author} category={category} className="min-w-[300px] lg:w-1/4 lg:min-w-0" />
             )
           }
         </div>

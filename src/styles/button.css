@@ -2,12 +2,18 @@
   background: var(--color-brown);
   color: var(--color-white);
   font-size: 14px;
+  transition: 0.5s;
+}
+
+.btn-primary:hover {
+  background: #242424;
 }
 
 .btn-secondary {
   background: var(--color-white);
   color: var(--color-brown);
   font-size: 14px;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .btn-shadow {

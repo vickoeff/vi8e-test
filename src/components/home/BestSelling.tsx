@@ -63,12 +63,12 @@ const BestSellingItem = ({ name, image, price, className }: IBestSellingItemProp
 
 export const BestSelling = () => {
   return (
-    <section className="container flex flex-row gap-4 pb-[100px]">
-      <div className="w-1/2 p-10 bg-[url('/images/best-selling.jpg')] bg-no-repeat bg-cover">
+    <section className="px-0 md:container flex flex-col md:flex-row gap-4 pb-[100px]">
+      <div className="w-full min-h-[471px] lg:w-1/2 py-20 px-10 md:py-10 md:px-10 bg-[url('/images/best-selling.jpg')] bg-no-repeat bg-cover">
         <h2 className="text-subtitle mb-3">Our Best Selling<br />Products</h2>
         <Button>SHOP COLLECTIONS</Button>
       </div>
-      <div className="grid grid-flow-col grid-cols-4 grid-rows-2 gap-4">
+      <div className="grid grid-flow-col grid-cols-2 md:grid-cols-4 grid-rows-2 gap-4">
         {MOCK_DATA.map((item, idx) => <BestSellingItem key={idx} name={item.name} image={item.image} price={item.price} />)}
       </div>
     </section>
